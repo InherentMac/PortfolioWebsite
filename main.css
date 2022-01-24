@@ -1,0 +1,149 @@
+:root {
+  --typingSpeed: 3s;
+  --typingTextLength: 16;
+}
+
+body {
+    background-color:#FEFFDE;
+    
+  }
+
+.secondColour {
+    background-color:#DDFFBC;
+}
+h2{
+  font-family: 'Nixie One', cursive;
+}
+
+h1{
+  font-family: 'Cutive Mono', monospace;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #91C788;
+  }
+.navbar-nav li a:hover {
+  color: #FEFFDE !important;
+}
+
+.parent{
+    scroll-snap-type: y mandatory;
+    
+    width: 100%;
+    height: 100%;
+    flex: none;
+    flex-flow: column nowrap;
+  }
+.child{
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+}
+#card{
+  background-color: #FEFFDE;
+  overflow: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container1{ 
+  background-color: #FEFFDE;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.typingText{
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+}
+.typingText::before,
+.typingText::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+}
+.typingText::before{
+  background: #FEFFDE;
+  animation: typewriter var(--typingSpeed)
+    steps(var(--typingTextLength)) 1s forwards;
+}
+.typingText::after{
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typingSpeed)
+      steps(var(--typingTextLength)) 1s forwards,
+    blink 1000ms steps(2,start) infinite;
+}
+.fadeIn {
+  color: hsl(0 0% 0% / 0.7);
+  font-family: 'Nixie One', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typingSpeed) + 2s) forwards;
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container2{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image:url(../images/wnZwIbc.gif);
+}
+.container3{
+  background-color: #DDFFBC;
+  background-image:url(../images/nginx_topology.png);
+  background-size: 100%;
+}
+.container4{
+  background-color: #91C788;
+}
+.contentDiv{
+  position: relative;
+  background-color: #FEFFDE;
+  place-content: center;
+  text-align: center;
+}
+.footer {
+    background-color: #52734D;
+    bottom: 0;
+    left: 0;
+    color: #FEFFDE;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+.footerLinks{
+  font-family: 'Nixie One', cursive;
+  color: black;
+}
